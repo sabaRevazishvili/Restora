@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --brand-bg: #1a191b; /* Deep Onyx [cite: 30] */
+  --brand-primary: #d1c0a8; /* Sand Beige [cite: 29] */
+  --brand-text: #ffffff; /* Pure White [cite: 31] */
+  --brand-text-dim: #e5e5e5; /* Cool Slate [cite: 32] */
+  --surface-light: #252426; /* UI Surface [cite: 34] */
+}
