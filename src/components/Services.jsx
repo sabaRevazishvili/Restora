@@ -27,7 +27,7 @@ const Services = () => {
                 className="group relative overflow-hidden flex flex-col h-full"
               >
                 {/* Top accent line */}
-                <div className="absolute top-0 left-0 h-[2px] bg-gold w-0 group-hover:w-full transition-all duration-500" />
+                <div className="absolute top-0 left-0 h-0.5 bg-gold w-0 group-hover:w-full transition-all duration-500" />
                 
                 <Icon 
                   name={service.title} 

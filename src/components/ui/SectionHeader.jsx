@@ -23,7 +23,7 @@ const SectionHeader = ({
         </h2>
       )}
       {subtitle && (
-        <p className="max-w-[560px] text-text-secondary font-sans">
+        <p className="max-w-140 text-text-secondary font-sans">
           {subtitle}
         </p>
       )}

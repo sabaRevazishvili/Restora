@@ -26,7 +26,7 @@ const StartProject = () => {
           />
         </ScrollReveal>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-[640px] mx-auto mt-12 space-y-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-160 mx-auto mt-12 space-y-6">
           {startProjectFields.map((field, idx) => (
             <ScrollReveal key={field.name} delay={field.delay} threshold={0.1}>
               <Input 
