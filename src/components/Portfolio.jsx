@@ -1,6 +1,6 @@
 // src/components/Portfolio.jsx
 import React from "react";
-import { SectionHeader, ScrollReveal } from "./ui";
+import { ScrollReveal } from "./ui";
 import { portfolioProjects } from "../constants";
 
 const Portfolio = () => {
@@ -11,10 +11,14 @@ const Portfolio = () => {
     >
       <div className="container mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <SectionHeader
-            eyebrow="Selected Work"
-            title="Curation of Excellence"
-          />
+          <div className={`flex flex-col mb-16 text-center items-center`}>
+            <h2 className="text-4xl md:text-5xl font-serif text-text-primary mb-6">
+              Curation of Excellence
+            </h2>
+            <span className="text-gold font-sans text-xs uppercase tracking-[0.2em] mb-4">
+              Selected Work
+            </span>
+          </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
