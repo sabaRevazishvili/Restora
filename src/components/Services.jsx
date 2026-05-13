@@ -1,6 +1,6 @@
 // src/components/Services.jsx
 import React from "react";
-import { Card, Icon, ScrollReveal } from "./ui";
+import { Card, ScrollReveal } from "./ui";
 import { services } from "../constants";
 
 const Services = () => {
@@ -26,24 +26,9 @@ const Services = () => {
           {services.map((service, idx) => (
             <ScrollReveal key={service.id} delay={idx * 100}>
               <Card
-                bordered
-                hover
                 className="group relative overflow-hidden flex flex-col h-full"
-              >
-                {/* Top accent line */}
-                <div className="absolute top-0 left-0 h-0.5 bg-gold w-0 group-hover:w-full transition-all duration-500" />
-
-                <Icon
-                  name={service.title}
-                  className="text-gold mb-6 group-hover:scale-110 transition-transform duration-300"
-                />
-                <h3 className="font-serif text-xl text-text-primary mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </Card>
+                service={service}
+              />
             </ScrollReveal>
           ))}
         </div>
