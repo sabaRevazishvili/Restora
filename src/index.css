@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -9,7 +9,7 @@
   --color-text-primary: #f5f0e8;
   --color-text-secondary: #8a8278;
   --color-text-inverse: #1c1a18;
-  --color-sand: #C4B49A;
+  --color-sand: #c4b49a;
   --color-gold: #c4a84a;
   --color-border-subtle: #2a2520;
 
@@ -17,14 +17,10 @@
   --font-sans: "DM Sans", sans-serif;
 }
 
-html, body {
+html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
-}
-
-#root {
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -39,7 +35,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
 }
 
@@ -62,7 +63,9 @@ h1, h2, h3, h4, h5, h6 {
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
 }
 
 /* Nav link underline animation */
@@ -71,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -87,12 +90,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Light Bloom */
 .hero-bloom {
-  background: radial-gradient(circle at 30% 60%, rgba(196,180,154,0.06), transparent);
+  background: radial-gradient(
+    circle at 30% 60%,
+    rgba(196, 180, 154, 0.06),
+    transparent
+  );
 }
 
 /* Hero Grain texture */
 .hero-grain::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -102,8 +109,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pulsing Scroll Icon */
 @keyframes pulse-gentle {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(8px); opacity: 1; }
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
 }
 
 .animate-pulse-gentle {
