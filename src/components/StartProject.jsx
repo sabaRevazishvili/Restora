@@ -1,8 +1,10 @@
 // src/components/StartProject.jsx
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Button, Input, ScrollReveal } from "./ui";
-import { startProjectFields } from "../constants";
+import Button from "./ui/Button";
+import Input from "./ui/Input";
+import ScrollReveal from "./ui/ScrollReveal";
+import { startProjectFields } from "../constants/forms";
 
 const StartProject = () => {
   const {
@@ -38,8 +40,8 @@ const StartProject = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="max-w-160 mx-auto mt-12 space-y-6"
         >
-          {startProjectFields.map((field, idx) => (
-            <ScrollReveal key={field.name} delay={field.delay} threshold={0.1}>
+          {startProjectFields.map((field, index) => (
+            <ScrollReveal key={field.name} delay={index * 10} threshold={0.1}>
               <Input
                 label={field.label}
                 name={field.name}

@@ -1,7 +1,7 @@
 // src/components/Portfolio.jsx
 import React from "react";
-import { ScrollReveal } from "./ui";
-import { portfolioProjects } from "../constants";
+import ScrollReveal from "./ui/ScrollReveal";
+import { portfolioProjects } from "../constants/portfolio";
 
 const Portfolio = () => {
   return (
@@ -34,7 +34,7 @@ const Portfolio = () => {
 const ProjectCard = ({ project }) => {
   return (
     <ScrollReveal
-      delay={project.delay}
+      delay={project.id * 10}
       className="group relative aspect-4/3 bg-surface-card border border-gold/30 cursor-pointer overflow-hidden transition-all duration-750 hover:scale-[1.03] hover:border-gold"
     >
       {/* Decorative gradient background */}
