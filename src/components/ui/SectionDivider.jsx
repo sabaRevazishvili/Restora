@@ -1,5 +1,5 @@
 // src/components/ui/SectionDivider.jsx
-import React from 'react';
+import React from "react";
 
 const SectionDivider = () => {
   return (
@@ -8,4 +8,3 @@ const SectionDivider = () => {
 };
 
 export default SectionDivider;
-export { SectionDivider };
