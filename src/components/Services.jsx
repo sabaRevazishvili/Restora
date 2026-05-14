@@ -1,7 +1,9 @@
 // src/components/Services.jsx
 import React from "react";
-import { Card, ScrollReveal } from "./ui";
-import { services } from "../constants";
+import Card from "./ui/Card";
+import ScrollReveal from "./ui/ScrollReveal";
+import { services } from "../constants/services";
+
 
 const Services = () => {
   return (
@@ -26,7 +28,7 @@ const Services = () => {
           {services.map((service, idx) => (
             <ScrollReveal key={service.id} delay={idx * 100}>
               <Card
-                className="group relative overflow-hidden flex flex-col h-full"
+                className="group  overflow-hidden flex flex-col h-full"
                 service={service}
               />
             </ScrollReveal>

@@ -1,5 +1,4 @@
 // src/components/ui/Card.jsx
-import React from "react";
 import {
   Lightbulb,
   LayoutTemplate,
@@ -7,21 +6,22 @@ import {
   ChefHat,
   Waves,
   Wine,
+  HelpCircle,
 } from "lucide-react";
 
 const iconMap = {
-  "Concept Development": Lightbulb,
-  "Interior Curation": LayoutTemplate,
-  "Operational Precision": Workflow,
-  "Culinary Strategy": ChefHat,
-  "Brand Resonance": Waves,
-  "Beverage Curation": Wine,
+  Lightbulb,
+  LayoutTemplate,
+  Workflow,
+  ChefHat,
+  Waves,
+  Wine,
 };
 
-const Card = ({ children, className = "", service }) => {
-  const IconComponent = iconMap[service.title] || HelpCircle;
-  
-  const baseStyles = "bg-surface-card transition-all duration-300 p-8";
+const Card = ({ className = "", service }) => {
+  const IconComponent = iconMap[service.icon] || HelpCircle;
+
+  const baseStyles = "relative bg-surface-card transition-all duration-300 p-8";
   const borderStyles = "border border-border-subtle hover:border-gold";
   const hoverStyles = "hover:-translate-y-1 hover:shadow-xl";
 
