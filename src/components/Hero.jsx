@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import React, { useEffect, useState } from "react";
-import { Button } from "./ui";
+import Button from "./ui/Button";
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);

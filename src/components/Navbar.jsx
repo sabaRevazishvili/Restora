@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
-import { Button } from "./ui";
-import { navLinks } from "../constants";
+import Button from "./ui/Button";
+import { navLinks } from "../constants/navigation";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

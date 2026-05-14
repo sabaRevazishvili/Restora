@@ -1,7 +1,7 @@
 // src/components/Process.jsx
 import React from "react";
-import { ScrollReveal } from "./ui";
-import { processSteps } from "../constants";
+import ScrollReveal from "./ui/ScrollReveal";
+import { processSteps } from "../constants/process";
 
 const Process = () => {
   return (

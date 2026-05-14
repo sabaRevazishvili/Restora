@@ -1,7 +1,7 @@
 // src/components/About.jsx
 import React from "react";
-import { ScrollReveal } from "./ui";
-import { stats } from "../constants";
+import ScrollReveal from "./ui/ScrollReveal";
+import { stats } from "../constants/stats";
 
 const About = () => {
   return (
