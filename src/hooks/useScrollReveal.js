@@ -1,24 +1,22 @@
 // src/hooks/useScrollReveal.js
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
-export const useScrollReveal = (options = {}) => {
+export const useScrollReveal = ({ threshold = 0.12, once = true } = {}) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        if (options.once !== false) {
-          observer.unobserve(entry.target);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (once) observer.unobserve(entry.target);
+        } else if (!once) {
+          setIsVisible(false);
         }
-      } else if (options.once === false) {
-        setIsVisible(false);
-      }
-    }, {
-      threshold: options.threshold || 0.12,
-      ...options
-    });
+      },
+      { threshold },
+    );
 
     const currentElement = elementRef.current;
     if (currentElement) {
@@ -30,7 +28,7 @@ export const useScrollReveal = (options = {}) => {
         observer.unobserve(currentElement);
       }
     };
-  }, [options]);
+  }, [threshold, once]);
 
   return { elementRef, isVisible };
 };
